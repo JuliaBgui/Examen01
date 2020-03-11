@@ -108,21 +108,7 @@ public class Utilidades extends Configuracion {
 		}
 	}
 
-	public static Boolean validar2(String xpath, String elemento) throws Exception {
-		try {
-			new WebDriverWait(driver, 3).until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
-			// logger.pass("Se encontro el elemento: "+elemento);
-			elemento = "existe";
-			System.out.println("Se encontro el elemento: " + elemento);
 
-		} catch (Exception e) {
-			// logger.warning("No se encontro el elemento: "+elemento);
-			System.out.println("No se encontro el elemento: " + elemento);
-			e.printStackTrace();
-			throw new Exception();
-		}
-		return true;
-	}
 
 	public static String getTitulo() {
 		String texto = driver.getTitle();
